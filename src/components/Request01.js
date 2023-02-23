@@ -4,7 +4,15 @@ import axios from "axios";
 const correctUrl = "https://swapi.dev/api/people/1";
 // const uncorrectUrl = "https://swapi.dev/api/false/1";
 
-const requestHandler = () => {
+const requestHandler = (request) => {
+  if (request.method === "GET") {
+    getRequestHandler();
+  } else if (request.method === "POST") {
+    postRequestHandler();
+  }
+};
+
+const getRequestHandler = () => {
   axios
     .get(correctUrl)
     .then((result) => {
