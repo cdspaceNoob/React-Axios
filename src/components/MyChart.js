@@ -27,15 +27,17 @@ const data = {
     {
       type: "line",
       label: "Dataset 1",
+      fill: "start",
+      backgroundColor: "rgb(54, 162, 235, 0.4)",
       borderColor: "rgb(54, 162, 235)",
       borderWidth: 2,
-      data: [1, 2, 3, 4, 5],
+      data: [1, 2, 3, 4, 5, 6, 7],
     },
     {
       type: "bar",
       label: "Dataset 2",
       backgroundColor: "rgb(255, 99, 132)",
-      data: [1, 2, 3, 4, 5, 6],
+      data: [1, 2, 3, 4, 5, 6, 7],
       borderColor: "red",
       borderWidth: 2,
     },
@@ -43,7 +45,16 @@ const data = {
       type: "bar",
       label: "Dataset 3",
       backgroundColor: "rgb(75, 192, 192)",
-      data: [1, 2, 3, 4, 5, 6],
+      data: [1, 2, 3, 4, 5, 6, 7],
+    },
+    {
+      type: "line",
+      fill: "start",
+      lineTension: 0.3,
+      lable: "Datatest 4",
+      borderColor: "blue",
+      backgroundColor: "orange",
+      data: [0, 5, 3, 8, 1, 6, 3],
     },
   ],
 };
@@ -221,7 +232,7 @@ const data = {
 const MyChart = () => {
   return (
     <Fragment>
-      <Line type="line" data={data} />
+      <Line data={data} />
     </Fragment>
   );
 };
